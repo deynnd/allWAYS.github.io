@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!--character encoding system-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="location.css"> <!--link for css-->
+    <title>allWAYS</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 100px;
+            width: 100%;
+            left: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="map" style="width: 100%; height: 100vh; top: 13px; "></div>
+
+    <div class="topRectangle">
+        <h1 class="webName"> allWAYS</h1> <!--Web Name para sa headings-->
+    </div>
+
+
+
+    <div class="navbar">
+        <a class="active" href="location.html">Find Location</a>
+        <a href="schedule.html">Schedules</a>
+        <a href="about.html">About</a>
+        <a class="logout" onclick="logout()">Log Out</a>
+        <script>
+            function logout() {
+                confirm("Are you sure you want to log out?");
+                if (confirm) {
+                    window.location = "home.html";
+                }
+                else {
+                    window.location = "location.html"
+                }
+            }
+        </script>
+    </div>
+    <img src="logo.png">
+</body>
+
+</html>
+
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+<script>
+    var map = L.map('map').setView([14.2120, 121.1676], 11);
+    var tileLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    var marker = L.marker([14.2120, 121.1676]).addTo(map);
+
+    L.Routing.control({
+        waypoints: [
+            L.latLng(14.2120, 121.1676),
+            L.latLng(14.2042, 121.1546)
+        ]
+    }).addTo(map);
+</script>

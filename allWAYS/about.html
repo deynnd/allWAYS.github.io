@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!--character encoding system-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css"> <!--link for css-->
+    <title>allWAYS</title>
+</head>
+
+<body>
+
+    <div class="topRectangle">
+        <h1 class="webName"> allWAYS</h1> <!--Web Name para sa headings-->
+    </div>
+
+    <div class="navbar">
+        <a href="location.html">Find Location</a>
+        <a href="schedule.html">Schedules</a>
+        <a class="active" href="about.html">About</a>
+        <a class="logout" onclick="logout()">Log Out</a>
+        <script>
+            function logout() {
+                confirm("Are you sure you want to log out?");
+                if (confirm) {
+                    window.location = "home.html";
+                }
+                else {
+                    window.location = "about.html";
+                }
+            }
+        </script>
+    </div>
+
+    <h1 class="webNametwo"> allWAYS</h1>
+    <img class="logoone" src="logo.png">
+    <img class="logotwo" src="logo.png">
+
+    <hr style="height: 1.5px; 
+    position:relative; 
+    border-width: 0;
+    background-color: white; 
+    top: 160px">
+
+    <p class="definition">Welcome to allWays, your ultimate guide to navigating Calamba with ease. Our website is
+        dedicated to providing you with the shortest routes within our vibrant city, ensuring you reach your destination
+        swiftly and efficiently. Say goodbye to unnecessary detours and hello to a seamless travel experience.
+        <br>
+        <br>Short Route Navigation: Empower users to effortlessly find the shortest and most efficient routes to their
+        desired destinations, optimizing travel time and enhancing convenience.
+        <br>
+        <br>Time Management: Assist users in calculating their arrival and departure times, facilitating effective time
+        management for school-related and personal activities.
+        <br>
+        <br>Event Exploration: Enhance community engagement by helping CCC students discover unfamiliar locations,
+        whether for off-campus events or non-academic gatherings within Calamba City.
+    </p>
+
+    <p class="developers">The Developers</p>
+
+    <img class="dani" src="Dani.jpg">
+    <p class="danitext">Danielle Mae S. Malubag</p>
+
+    <img class="zyrelle" src="Zyrelle.jpg">
+    <p class="zytext">Zyrelle Jean L. Apuntar</p>
+
+    <img class="eisell" src="Eisell.jpg">
+    <p class="seltext">Eisell Jean L. Romero</p>
+
+    <img class="kyle" src="Kyle.jpg">
+    <p class="kyletext">John Kyle J. Bardeloza</p>
+
+    <p class="ty">Thank you for using allWAYS! <br> _ </p>
+
+    <hr class="line">
+
+
+</body>
+
+</html>
